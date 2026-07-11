@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: FRSBE53/rosivan-bezerra-advocacia
+  name: git-gateway
   branch: principal
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 locale: pt
 publish_mode: editorial_workflow
