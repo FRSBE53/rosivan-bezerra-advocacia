@@ -1,0 +1,6 @@
+backend:
+  name: github
+  repo: SEU_USUARIO/rosivan-bezerra-advocacia
+media_folder: uploads
+public_folder: /uploads
+collections: []
