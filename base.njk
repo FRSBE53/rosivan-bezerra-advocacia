@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or 'Rosivan Bezerra Advocacia — atuação jurídica estratégica, técnica e responsável.' }}">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>{{ title }} | Rosivan Bezerra Advocacia</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Página inicial">
+        <img src="/assets/img/logo.svg" alt="Rosivan Bezerra Advocacia">
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="/sobre/">Sobre</a>
+        <a href="/atuacao/">Atuação</a>
+        <a href="/metodo/">Método</a>
+        <a href="/artigos/">Artigos</a>
+        <a class="btn btn-small" href="/contato/">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>{{ content | safe }}</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="/assets/img/logo.svg" alt="Rosivan Bezerra Advocacia">
+        <p>Atuação jurídica com estratégia, clareza e responsabilidade.</p>
+      </div>
+      <div>
+        <strong>Contato</strong>
+        <p><a href="tel:+5584988161000">(84) 98816-1000</a><br>
+        <a href="mailto:rosivanbezerra@bezerraesilvaadvocacia.adv.br">rosivanbezerra@bezerraesilvaadvocacia.adv.br</a></p>
+      </div>
+      <div>
+        <strong>Identificação profissional</strong>
+        <p>Francisco Rosivan da Silva Bezerra<br>OAB/RN 16.941</p>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Rosivan Bezerra Advocacia.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/5584988161000?text=Ol%C3%A1%2C%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

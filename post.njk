@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <header class="page-hero">
+    <div class="container narrow">
+      <span class="eyebrow">{{ category or 'Artigo' }}</span>
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      <small>{{ date | dateBR }}</small>
+    </div>
+  </header>
+  {% if image %}<img class="post-cover" src="{{ image }}" alt="Imagem do artigo {{ title }}">{% endif %}
+  <section class="content-section">
+    <div class="container narrow prose">{{ content | safe }}</div>
+  </section>
+</article>

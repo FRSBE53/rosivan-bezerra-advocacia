@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Início
+description: Advocacia estratégica em Direito Administrativo, Licitações, Contratos Públicos, Servidores Públicos e Contencioso.
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Advocacia estratégica e responsável</span>
+      <h1>Segurança jurídica para decisões que exigem experiência e precisão.</h1>
+      <p>Atuação técnica, transparente e personalizada na prevenção de riscos, defesa de direitos e construção de soluções jurídicas consistentes.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/contato/">Solicitar atendimento</a>
+        <a class="text-link" href="/atuacao/">Conhecer áreas de atuação →</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <span>Francisco Rosivan da Silva Bezerra</span>
+      <strong>Advogado — OAB/RN 16.941</strong>
+      <p>Assessoria e representação jurídica com foco em estratégia, clareza e resultados responsáveis.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">Áreas de atuação</span><h2>Soluções jurídicas especializadas</h2></div>
+    <div class="cards">
+      <article class="card"><h3>Direito Administrativo</h3><p>Consultoria e atuação em processos administrativos, responsabilização, servidores e relações com a Administração Pública.</p></article>
+      <article class="card"><h3>Licitações e Contratos</h3><p>Impugnações, recursos, reequilíbrio econômico-financeiro, sanções, execução contratual e medidas judiciais.</p></article>
+      <article class="card"><h3>Contencioso Estratégico</h3><p>Planejamento e condução de demandas judiciais com análise de riscos e definição da estratégia processual adequada.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container split">
+    <div><span class="eyebrow">Método de trabalho</span><h2>Atendimento jurídico construído com clareza</h2></div>
+    <div class="steps">
+      <div><b>01</b><span><strong>Diagnóstico</strong><br>Análise detalhada dos fatos, documentos e objetivos.</span></div>
+      <div><b>02</b><span><strong>Estratégia</strong><br>Definição de caminhos, riscos e providências prioritárias.</span></div>
+      <div><b>03</b><span><strong>Execução</strong><br>Atuação técnica com comunicação transparente durante cada etapa.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">Conteúdo jurídico</span><h2>Artigos recentes</h2></div>
+    <div class="cards">
+      {% for post in collections.posts | reverse %}
+        {% if loop.index <= 3 and post.data.published != false %}
+        <article class="card article-card">
+          <small>{{ post.data.date | dateBR }}</small>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.data.description }}</p>
+          <a class="text-link" href="{{ post.url }}">Ler artigo →</a>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

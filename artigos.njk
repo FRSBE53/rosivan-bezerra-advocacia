@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: /artigos/index.html
+title: Artigos
+description: Conteúdo informativo sobre Direito Administrativo, licitações, contratos e temas jurídicos.
+---
+<section class="page-hero"><div class="container narrow"><span class="eyebrow">Conteúdo jurídico</span><h1>Artigos</h1><p>Informações e análises jurídicas em linguagem clara.</p></div></section>
+<section class="section"><div class="container"><div class="cards">
+{% for post in collections.posts | reverse %}
+  {% if post.data.published != false %}
+  <article class="card article-card"><small>{{ post.data.date | dateBR }}</small><h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2><p>{{ post.data.description }}</p><a class="text-link" href="{{ post.url }}">Ler artigo →</a></article>
+  {% endif %}
+{% endfor %}
+</div></div></section>

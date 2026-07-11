@@ -1,6 +1,65 @@
 backend:
   name: github
-  repo: SEU_USUARIO/rosivan-bezerra-advocacia
-media_folder: uploads
-public_folder: /uploads
-collections: []
+  repo: FRSBE53/rosivan-bezerra-advocacia
+  branch: principal
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+locale: pt
+publish_mode: editorial_workflow
+media_folder: "uploads"
+public_folder: "/uploads"
+site_url: "https://rosivan-bezerra-advocacia.netlify.app"
+display_url: "https://rosivan-bezerra-advocacia.netlify.app"
+logo_url: "/assets/img/logo.svg"
+
+collections:
+  - name: "posts"
+    label: "Artigos"
+    label_singular: "Artigo"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "artigos/{{slug}}/"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Resumo", name: "description", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Categoria", name: "category", widget: "string", default: "Direito" }
+      - { label: "Publicado", name: "published", widget: "boolean", default: true }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+
+  - name: "paginas"
+    label: "Páginas institucionais"
+    files:
+      - label: "Sobre"
+        name: "sobre"
+        file: "content/pages/sobre.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - label: "Áreas de atuação"
+        name: "atuacao"
+        file: "content/pages/atuacao.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - label: "Método de trabalho"
+        name: "metodo"
+        file: "content/pages/metodo.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - label: "Contato"
+        name: "contato"
+        file: "content/pages/contato.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
