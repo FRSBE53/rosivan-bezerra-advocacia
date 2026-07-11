@@ -7,7 +7,7 @@ layout: layouts/base.njk
       <span class="eyebrow">{{ category or 'Artigo' }}</span>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
-      <small>{{ date | dateBR }}</small>
+     <small>{{ date }}</small>
     </div>
   </header>
   {% if image %}<img class="post-cover" src="{{ image }}" alt="Imagem do artigo {{ title }}">{% endif %}
